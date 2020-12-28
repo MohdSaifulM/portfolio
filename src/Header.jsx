@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect } from "react";
-import MediaQuery, { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
 import { NavLink } from "react-router-dom";
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';

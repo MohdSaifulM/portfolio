@@ -33,7 +33,7 @@ function Works() {
                     <div className="collapsible-body">
                         <div className="row">
                             <div className="col s12 m6">
-                                <img src="images/avoid-the-virus.png" alt="img" id="rcorners2" className="center works-images"/>
+                                <img src="public/images/avoid-the-virus.png" alt="img" id="rcorners2" className="center works-images"/>
                             </div>
                             <div className="col s12 m6">
                                 <table>
@@ -61,8 +61,8 @@ function Works() {
                     <div className="collapsible-body">
                     <div className="row">
                         <div className="col s12 m6">
-                            <img src="images/Catmeownity.png" alt="img" className="center works-images"/>
-                            <img src="images/Catmeownity2.png" alt="img" className="center works-images"/>
+                            <img src="public/images/Catmeownity.png" alt="img" className="center works-images"/>
+                            <img src="public/images/Catmeownity2.png" alt="img" className="center works-images"/>
                         </div>
                             <div className="col s12 m6">
                                 <table>
@@ -90,8 +90,8 @@ function Works() {
                     <div className="collapsible-body">
                     <div className="row">
                         <div className="col s12 m6">
-                            <img src="images/goHalal.png" alt="img" className="center works-images"/>
-                            <img src="images/goHalal2.png" alt="img" className="center works-images"/>
+                            <img src="public/images/goHalal.png" alt="img" className="center works-images"/>
+                            <img src="public/images/goHalal2.png" alt="img" className="center works-images"/>
                         </div>
                             <div className="col s12 m6">
                                 <table>
