@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect } from "react";
 import { useMediaQuery } from 'react-responsive';
 import { NavLink } from "react-router-dom";
+import git from './icons/github.svg';
+import linkedin from './icons/linkedin.svg';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
@@ -83,8 +85,8 @@ function Header() {
                 <div className="footer-copyright">
                     <div className="container grey-text text-darken-4">
                         <div className="right">
-                            <a href="https://git.generalassemb.ly/mohdsaiful" className="footer-icons"><img src="icons/github.svg" alt="github" srcSet="icons/github.svg" style={{height: "20px"}}/></a>
-                            <a href="https://www.linkedin.com/in/mohammad-saiful-bin-mohammad/" className="footer-icons"><img src="icons/linkedin.svg" alt="linkedin" srcSet="icons/linkedin.svg" style={{height: "20px"}}/></a>
+                            <a href="https://git.generalassemb.ly/mohdsaiful" className="footer-icons"><img src={git} alt="github" srcSet={git} style={{height: "20px"}}/></a>
+                            <a href="https://www.linkedin.com/in/mohammad-saiful-bin-mohammad/" className="footer-icons"><img src={linkedin} alt="linkedin" srcSet={linkedin} style={{height: "20px"}}/></a>
                         </div>
                         <strong className="left">
                             © 2020 Copyright All rights reserved

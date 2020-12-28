@@ -1,6 +1,9 @@
 import React from 'react'
 import { useEffect } from "react";
 import { useMediaQuery } from 'react-responsive';
+import front from './images/front-end.png';
+import back from './images/back-end.png';
+import lang from './images/database.png';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
@@ -31,7 +34,7 @@ function About() {
             <div className="row container skill-cards">
                 <div className="card hoverable animate__animated animate__fadeInLeft">
                     <div className="card-image waves-effect waves-block waves-light">
-                        <img className="activator skills-image" src="public/images/front-end.png"/>
+                        <img className="activator skills-image" src={front} />
                     </div>
                     {!isMobile && <div className="card-content">
                         <span className="card-title activator grey-text text-darken-4 center-align">Front-End</span>
@@ -46,7 +49,7 @@ function About() {
                 </div>
                 <div className="card hoverable animate__animated animate__fadeInLeft">
                     <div className="card-image waves-effect waves-block waves-light">
-                        <img className="activator skills-image" src="public/images/back-end.png"/>
+                        <img className="activator skills-image" src={back} />
                     </div>
                     {!isMobile && <div className="card-content">
                         <span className="card-title activator grey-text text-darken-4 center-align">Back-End</span> 
@@ -61,7 +64,7 @@ function About() {
                 </div>
                 <div className="card hoverable animate__animated animate__fadeInLeft">
                     <div className="card-image waves-effect waves-block waves-light">
-                        <img className="activator skills-image" src="public/images/database.png"/>
+                        <img className="activator skills-image" src={lang} />
                     </div>
                     {!isMobile && <div className="card-content">
                          <span className="card-title activator grey-text text-darken-4 center-align">Languages</span>

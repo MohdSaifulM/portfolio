@@ -1,6 +1,11 @@
 import React from 'react';
 import { useEffect } from "react";
 import { useMediaQuery } from 'react-responsive';
+import avoid from './images/avoid-the-virus.png';
+import cat1 from './images/Catmeownity.png';
+import cat2 from './images/Catmeownity2.png';
+import go1 from './images/goHalal.png';
+import go2 from './images/goHalal2.png'
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
@@ -33,7 +38,7 @@ function Works() {
                     <div className="collapsible-body">
                         <div className="row">
                             <div className="col s12 m6">
-                                <img src="public/images/avoid-the-virus.png" alt="img" id="rcorners2" className="center works-images"/>
+                                <img src={avoid} alt="img" id="rcorners2" className="center works-images"/>
                             </div>
                             <div className="col s12 m6">
                                 <table>
@@ -61,8 +66,8 @@ function Works() {
                     <div className="collapsible-body">
                     <div className="row">
                         <div className="col s12 m6">
-                            <img src="public/images/Catmeownity.png" alt="img" className="center works-images"/>
-                            <img src="public/images/Catmeownity2.png" alt="img" className="center works-images"/>
+                            <img src={cat1} alt="img" className="center works-images"/>
+                            <img src={cat2} alt="img" className="center works-images"/>
                         </div>
                             <div className="col s12 m6">
                                 <table>
@@ -90,8 +95,8 @@ function Works() {
                     <div className="collapsible-body">
                     <div className="row">
                         <div className="col s12 m6">
-                            <img src="public/images/goHalal.png" alt="img" className="center works-images"/>
-                            <img src="public/images/goHalal2.png" alt="img" className="center works-images"/>
+                            <img src={go1} alt="img" className="center works-images"/>
+                            <img src={go2} alt="img" className="center works-images"/>
                         </div>
                             <div className="col s12 m6">
                                 <table>
