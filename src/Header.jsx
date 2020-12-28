@@ -85,7 +85,7 @@ function Header() {
                 <div className="footer-copyright">
                     <div className="container grey-text text-darken-4">
                         <div className="right">
-                            <a href="https://git.generalassemb.ly/mohdsaiful" className="footer-icons"><img src={git} alt="github" srcSet={git} style={{height: "20px"}}/></a>
+                            <a href="https://github.com/MohdSaifulM" className="footer-icons"><img src={git} alt="github" srcSet={git} style={{height: "20px"}}/></a>
                             <a href="https://www.linkedin.com/in/mohammad-saiful-bin-mohammad/" className="footer-icons"><img src={linkedin} alt="linkedin" srcSet={linkedin} style={{height: "20px"}}/></a>
                         </div>
                         <strong className="left">

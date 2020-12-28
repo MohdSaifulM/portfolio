@@ -54,7 +54,7 @@ function Works() {
                                     </tbody>
                                 </table>
                                 <div>
-                                    <a href="https://git.generalassemb.ly/mohdsaiful/avoid_the_virus">Github</a>
+                                    <a href="https://github.com/MohdSaifulM/avoid_the_virus">Github</a>
                                 </div>
                                     <a href="https://pages.git.generalassemb.ly/mohdsaiful/avoid_the_virus/">Live URL</a>
                             </div>
@@ -83,7 +83,7 @@ function Works() {
                                     </tbody>
                                 </table>
                                 <div>
-                                    <a href="https://git.generalassemb.ly/ryhuz/catmeownity">Github</a>
+                                    <a href="https://github.com/MohdSaifulM/Catmeownity">Github</a>
                                 </div>
                                     <a href="https://catmeownity.herokuapp.com/app/">Live URL</a>
                             </div>
@@ -112,7 +112,7 @@ function Works() {
                                     </tbody>
                                 </table>
                                 <div>
-                                    <a href="https://git.generalassemb.ly/hfzgfr/halalfoodfinder">Github</a>
+                                    <a href="https://github.com/MohdSaifulM/goHalalSG">Github</a>
                                 </div>
                                     <a href="https://gohalalsg.herokuapp.com/">Live URL</a>
                             </div>
