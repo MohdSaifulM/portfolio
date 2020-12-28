@@ -23,7 +23,7 @@ function About() {
 
     const isMobile = useMediaQuery({ query: '(max-width: 425px)' });
 
-    const aboutMe = "A passionate software engineer who has spent a couple of years in industrial automation. I find excitement in coming up with solutions to engineering problems especially when troubleshooting. The satisfaction when a problem is solved is unreal."
+    const aboutMe = "Passionate, discerning and focused with an industrial automation background. I find excitement in coming up with solutions and bettering lives through progressively delivering convenience. As a full stack developer, I am engineered to serve and uplift today's greatest gift — the technology revolution."
 
     return (
         <div className="container">
