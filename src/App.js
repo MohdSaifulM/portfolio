@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div>
-      <Router basename="/portfolio">
+      <Router basename="/">
         <Header/>
         <Switch>
           <Route exact path="/about">

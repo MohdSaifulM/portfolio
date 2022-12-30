@@ -27,6 +27,7 @@ main {
     left: 0;
     bottom: 0;
     width: 100%;
+    padding-top: unset !important;
 }
 
 #always-display {
@@ -41,10 +42,6 @@ main {
 .nav-icon {
     margin-top: 1rem;
     margin-left: 1rem;
-}
-
-footer, .nav {
-    opacity: 0.6;
 }
 
 .jumbo-image {
