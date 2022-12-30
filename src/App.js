@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div>
-      <Router basename="/portfolio">
+      <Router basename="/">
         <Header/>
         <Switch>
           <Route exact path="/about">
@@ -26,7 +26,7 @@ function App() {
             <Joke/>
           </Route>
           <Route exact path="/*">
-            <Redirect to="/portfolio"/>
+            <Redirect to="/"/>
           </Route>
         </Switch>
       </Router>
