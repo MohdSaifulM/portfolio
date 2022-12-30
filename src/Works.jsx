@@ -85,7 +85,6 @@ function Works() {
                                 <div>
                                     <a href="https://github.com/MohdSaifulM/Catmeownity">Github</a>
                                 </div>
-                                    <a href="https://catmeownity.herokuapp.com/app/">Live URL</a>
                             </div>
                         </div>
                     </div>
@@ -114,7 +113,6 @@ function Works() {
                                 <div>
                                     <a href="https://github.com/MohdSaifulM/goHalalSG">Github</a>
                                 </div>
-                                    <a href="https://gohalalsg.herokuapp.com/">Live URL</a>
                             </div>
                         </div>
                     </div>
