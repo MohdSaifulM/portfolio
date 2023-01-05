@@ -31,20 +31,29 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  padding: 1rem; }
 
 .branch-row {
-  height: 6rem;
-  width: 100%;
-  background: red;
+  height: 8.5rem;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-between; }
+  .branch-row--top {
+    width: 60%;
+    align-self: flex-end; }
+  .branch-row--bottom {
+    width: 67%; }
 
 .circle-group {
-  width: 30%;
   height: inherit;
   display: flex;
   justify-content: space-between; }
+  .circle-group--top {
+    width: 100%; }
+  .circle-group--bottom {
+    width: 20rem; }
 
 .circle {
-  width: 10%; }
+  width: 8rem;
+  clip-path: circle(3.9rem);
+  background: #777; }
