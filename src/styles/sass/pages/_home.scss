@@ -1,0 +1,10 @@
+.section-tree {
+    height: 30rem;
+    width: calc(100vw - 20rem);
+    background: rgba($color-white, 0.2);
+    border-radius: 5rem;
+    box-shadow: 0 .5rem 3rem rgba($color-black, 0.1);
+    backdrop-filter: blur(.5rem);
+    -webkit-backdrop-filter: blur(.5rem);
+    border: 1px solid rgba($color-white, 0.2);
+}

@@ -1,5 +1,11 @@
 const Home = () => {
-    return <h1>Home</h1>;
+    return (
+        <main>
+            <section className="section-tree">
+
+            </section>
+        </main>
+    )
 };
 
 export default Home;
