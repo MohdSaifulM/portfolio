@@ -22,7 +22,7 @@ main {
 
 .section-tree {
   height: 30rem;
-  width: calc(100vw - 20rem);
+  width: 76rem;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5rem;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.1);
