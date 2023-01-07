@@ -17,43 +17,4 @@ main {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
-  background: linear-gradient(115deg, #b58ecc, #5de6de); }
-
-.section-tree {
-  height: 30rem;
-  width: 76rem;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5rem;
-  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0.5rem);
-  -webkit-backdrop-filter: blur(0.5rem);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 1rem; }
-
-.branch-row {
-  height: 8.5rem;
-  display: flex;
-  justify-content: space-between; }
-  .branch-row--top {
-    width: 60%;
-    align-self: flex-end; }
-  .branch-row--bottom {
-    width: 67%; }
-
-.circle-group {
-  height: inherit;
-  display: flex;
-  justify-content: space-between; }
-  .circle-group--top {
-    width: 100%; }
-  .circle-group--bottom {
-    width: 20rem; }
-
-.circle {
-  width: 8rem;
-  clip-path: circle(3.9rem);
-  background: #777; }
+  width: 100vw; }
