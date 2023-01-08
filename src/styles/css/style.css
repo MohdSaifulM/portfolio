@@ -20,25 +20,25 @@ main {
   height: 100vh;
   width: 100vw;
   padding: 5rem;
-  background: linear-gradient(115deg, #2b5876, #4e4376); }
+  background: #343642; }
 
 body {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #000; }
+  color: #fff; }
 
 .heading-home {
-  font-size: 3rem; }
-
-.heading-home > strong {
+  color: #343642;
   line-height: 1;
   background: #962D3E;
   font-weight: 200;
-  font-size: 10rem; }
+  font-size: 10rem;
+  padding: 2.5rem;
+  border-radius: 3rem; }
 
 .section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%; }
+  flex-direction: column; }
