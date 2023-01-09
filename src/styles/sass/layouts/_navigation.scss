@@ -30,6 +30,6 @@
     }
 
 	&:hover ~ .section {
-		transform: perspective(20vw) rotateY(10deg) translateX(20vw) scaleY(1.2);
+		transform: perspective(20vw) rotateY(10deg) translateX(20vw) translateY(5rem) scaleY(1.2);
     }
 }

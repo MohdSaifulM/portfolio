@@ -65,11 +65,12 @@ body {
   .menu:hover {
     left: 0; }
   .menu:hover ~ .section {
-    transform: perspective(20vw) rotateY(10deg) translateX(20vw) scaleY(1.2); }
+    transform: perspective(20vw) rotateY(10deg) translateX(20vw) translateY(5rem) scaleY(1.2); }
 
 .section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 1s; }
+  transition: all 1s;
+  transform-origin: left center; }
