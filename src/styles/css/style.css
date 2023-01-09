@@ -17,10 +17,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   height: 100vh;
   width: 100vw;
   padding: 5rem;
-  background: #343642; }
+  background: #343642;
+  position: relative; }
 
 body {
   font-family: 'Rubik', sans-serif;
@@ -36,6 +38,28 @@ body {
   font-size: 10rem;
   padding: 2.5rem;
   border-radius: 3rem; }
+
+.menu {
+  font-size: 4rem;
+  color: #343642; }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -4rem;
+  height: 100vh;
+  width: calc(100vw - 80%);
+  background: #962D3E; }
+  .menu__nav {
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .menu__list {
+    list-style: none;
+    text-align: center;
+    width: 100%; }
+  .menu__item {
+    margin: 1rem; }
 
 .section {
   display: flex;

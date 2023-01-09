@@ -1,8 +1,10 @@
-import { Player } from '@lottiefiles/react-lottie-player'
+import { Player } from '@lottiefiles/react-lottie-player';
+import NavigationBar from '../layouts/NavigationBar';
 
 const Home = () => {
     return (
         <main>
+            <NavigationBar />
             <div className="section section-home-header">
                 <h1 className="heading-home">Hello World, I'm Saif</h1>
                 <Player
