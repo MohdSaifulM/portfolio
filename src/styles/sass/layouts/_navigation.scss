@@ -3,10 +3,12 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: -4rem;
+    left: -35rem;
     height: 100vh;
     width: calc(100vw - 80%);
     background: $accent-1;
+    box-shadow: 1px 0 2px rgba(0,0,0,.2);
+	transition: all 1s;
 
     &__nav {
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -20,5 +22,14 @@
 
     &__item {
         margin: 1rem;
+    }
+
+    
+	&:hover {
+		left: 0;
+    }
+
+	&:hover ~ .section {
+		transform: perspective(20vw) rotateY(10deg) translateX(20vw) scaleY(1.2);
     }
 }

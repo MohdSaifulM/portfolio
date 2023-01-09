@@ -48,10 +48,12 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: -4rem;
+  left: -35rem;
   height: 100vh;
   width: calc(100vw - 80%);
-  background: #962D3E; }
+  background: #962D3E;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2);
+  transition: all 1s; }
   .menu__nav {
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   .menu__list {
@@ -60,9 +62,14 @@ body {
     width: 100%; }
   .menu__item {
     margin: 1rem; }
+  .menu:hover {
+    left: 0; }
+  .menu:hover ~ .section {
+    transform: perspective(20vw) rotateY(10deg) translateX(20vw) scaleY(1.2); }
 
 .section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  transition: all 1s; }
