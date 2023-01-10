@@ -10,10 +10,22 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .20);
 	transition: all 1s;
 
+    &:hover {
+        width: 30vw;
+    }
+
+    &:hover &__nav {
+        left: 10vw;
+    }
+
+    &:hover ~ .section {
+        transform: perspective(20vw) rotateY(10deg) translateX(20vw) translateY(5rem) scaleY(1.2);
+    }
+
     &__nav {
         position: absolute;
         left: -20rem;
-        transition: 1.5s;
+        transition: 1.25s;
     }
 
     &__list {
@@ -26,16 +38,31 @@
         margin: 1rem;
     }
 
-    
-	&:hover {
-		width: 30vw;
-    }
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 230%;
+            transition: all .4s;
 
-    &:hover &__nav {
-        left: 10vw;
-    }
+            span {
+                margin-right: 1.5rem;
+                display: inline-block;
+            }
+        }
 
-	&:hover ~ .section {
-		transform: perspective(20vw) rotateY(10deg) translateX(20vw) translateY(5rem) scaleY(1.2);
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-black;
+            transform: translateX(1rem);
+        }
     }
 }

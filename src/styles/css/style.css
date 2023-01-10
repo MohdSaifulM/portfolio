@@ -31,11 +31,11 @@ body {
   color: #fff; }
 
 .heading-home {
-  color: #343642;
+  color: #fff;
   line-height: 1;
   background: #962D3E;
   font-weight: 200;
-  font-size: 10rem;
+  font-size: 8rem;
   padding: 2.5rem;
   border-radius: 3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
@@ -55,22 +55,40 @@ body {
   background: #962D3E;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   transition: all 1s; }
-  .menu__nav {
-    position: absolute;
-    left: -20rem;
-    transition: 1.5s; }
-  .menu__list {
-    list-style: none;
-    text-align: center;
-    width: 100%; }
-  .menu__item {
-    margin: 1rem; }
   .menu:hover {
     width: 30vw; }
   .menu:hover .menu__nav {
     left: 10vw; }
   .menu:hover ~ .section {
     transform: perspective(20vw) rotateY(10deg) translateX(20vw) translateY(5rem) scaleY(1.2); }
+  .menu__nav {
+    position: absolute;
+    left: -20rem;
+    transition: 1.25s; }
+  .menu__list {
+    list-style: none;
+    text-align: center;
+    width: 100%; }
+  .menu__item {
+    margin: 1rem; }
+  .menu__link:link, .menu__link:visited {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    background-size: 230%;
+    transition: all .4s; }
+    .menu__link:link span, .menu__link:visited span {
+      margin-right: 1.5rem;
+      display: inline-block; }
+  .menu__link:hover, .menu__link:active {
+    background-position: 100%;
+    color: #000;
+    transform: translateX(1rem); }
 
 .section {
   display: flex;
