@@ -8,7 +8,8 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  background: #343642; }
 
 body {
   box-sizing: border-box; }
@@ -21,7 +22,6 @@ main {
   height: 100vh;
   width: 100vw;
   padding: 5rem;
-  background: #343642;
   position: relative; }
 
 body {
@@ -37,7 +37,8 @@ body {
   font-weight: 200;
   font-size: 10rem;
   padding: 2.5rem;
-  border-radius: 3rem; }
+  border-radius: 3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
 
 .menu {
   font-size: 4rem;
@@ -47,15 +48,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: -35rem;
+  position: fixed;
+  left: 0;
   height: 100vh;
-  width: calc(100vw - 80%);
+  width: 3vw;
   background: #962D3E;
-  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   transition: all 1s; }
   .menu__nav {
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    position: absolute;
+    left: -20rem;
+    transition: 1.5s; }
   .menu__list {
     list-style: none;
     text-align: center;
@@ -63,7 +66,9 @@ body {
   .menu__item {
     margin: 1rem; }
   .menu:hover {
-    left: 0; }
+    width: 30vw; }
+  .menu:hover .menu__nav {
+    left: 10vw; }
   .menu:hover ~ .section {
     transform: perspective(20vw) rotateY(10deg) translateX(20vw) translateY(5rem) scaleY(1.2); }
 
