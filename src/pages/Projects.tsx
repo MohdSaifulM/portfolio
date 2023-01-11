@@ -1,5 +1,11 @@
+import NavigationBar from "../layouts/NavigationBar";
+
 const Projects = () => {
-    return <h1>Projects</h1>;
+    return (
+        <main>
+            <NavigationBar />
+        </main>
+    );
 };
 
 export default Projects;

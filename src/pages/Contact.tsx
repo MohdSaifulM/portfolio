@@ -1,5 +1,11 @@
+import NavigationBar from "../layouts/NavigationBar";
+
 const Contact = () => {
-    return <h1>Contact</h1>;
+    return (
+        <main>
+            <NavigationBar />
+        </main>
+    );
 };
 
 export default Contact;

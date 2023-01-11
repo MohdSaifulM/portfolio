@@ -1,5 +1,11 @@
+import NavigationBar from "../layouts/NavigationBar";
+
 const Journey = () => {
-    return <h1>Journey</h1>;
+    return (
+        <main>
+            <NavigationBar />
+        </main>
+    );
 };
 
 export default Journey;

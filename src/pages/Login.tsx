@@ -1,5 +1,11 @@
+import NavigationBar from "../layouts/NavigationBar";
+
 const Login = () => {
-    return <h1>Login</h1>;
+    return (
+        <main>
+            <NavigationBar />
+        </main>
+    );
 };
 
 export default Login;

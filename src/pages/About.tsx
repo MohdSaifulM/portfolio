@@ -1,5 +1,11 @@
+import NavigationBar from "../layouts/NavigationBar";
+
 const About = () => {
-    return <h1>About</h1>;
+    return (
+        <main>
+            <NavigationBar />
+        </main>
+    );
 };
 
 export default About;
