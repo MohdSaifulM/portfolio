@@ -1,0 +1,40 @@
+/* Media Query Manager */
+
+/*
+
+0 - 375px:        mobile-s
+375px - 425px:    mobile-m
+425px - 768px:    mobile-l
+768px - 1024px:   tablet
+1024px - 1440px:  desktop
+1440px - 2560px:  desktop-l
+
+1em = 16px
+
+*/
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == mobile-s {
+        @media only screen and (max-width: 23.43em) { @content };   //375px
+    }
+
+    @if $breakpoint == mobile-m {
+        @media only screen and (max-width: 26.56em) { @content };   //425px
+    }
+
+    @if $breakpoint == mobile-l {
+        @media only screen and (max-width: 48em) { @content };      //768px
+    }
+
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: 64em) { @content };   //1024px
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 90em) { @content };   //1440px
+    }
+
+    @if $breakpoint == desktop-l {
+        @media only screen and (max-width: 160em) { @content };   //2560px
+    }
+}
