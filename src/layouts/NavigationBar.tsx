@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const NavigationBar = () => {
     return (
@@ -11,6 +12,14 @@ const NavigationBar = () => {
                     <li className="menu__item"><Link to="/projects" className="menu__link">Projects</Link></li>
                 </ul>
             </nav>
+            <div className="menu__arrow">
+                <Player
+                    autoplay
+                    loop
+                    src="src\assets\arrow_hover.json"
+                >
+                </Player>
+            </div>
         </div>
     );
 };
