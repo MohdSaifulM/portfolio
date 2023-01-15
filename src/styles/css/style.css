@@ -23,6 +23,15 @@
 html {
   font-size: 62.5%;
   background: #343642; }
+  @media only screen and (max-width: 64em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 48em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 160em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }

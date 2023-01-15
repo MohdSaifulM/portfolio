@@ -35,6 +35,6 @@
     }
 
     @if $breakpoint == desktop-l {
-        @media only screen and (max-width: 160em) { @content };   //2560px
+        @media only screen and (min-width: 160em) { @content };   //2560px
     }
 }

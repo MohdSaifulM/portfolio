@@ -11,6 +11,18 @@ html {
 	// ? Since 100% on a default browser font-size is 16px so 10px is 62.5% : defines 1rem
 	font-size: 62.5%;	// ? 1rem = 10px, 10/16 = 62.5%
 	background: $background-1;
+	
+	@include responsive(tablet) {
+		font-size: 56.25%;	//? 1rem = 9px, 9/16 = 56.25%
+	}
+
+	@include responsive(mobile-l) {
+		font-size: 50%;	//? 1rem = 8px, 8/16 = 50%
+	}
+
+	@include responsive(desktop-l) {
+		font-size: 75%;	//? 1rem = 12px, 12/16 = 75%
+	}
 }
 
 body {
