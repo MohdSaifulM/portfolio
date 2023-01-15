@@ -1,4 +1,9 @@
 .menu {
+
+    @include responsive(tablet) {
+		display: none;
+	}
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +25,10 @@
 
     &:hover &__nav {
         left: 10vw;
+
+        @include responsive(desktop) {
+            left: 7vw;
+        }
     }
 
     &:hover ~ .section {

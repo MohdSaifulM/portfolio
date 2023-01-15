@@ -77,12 +77,18 @@ body {
   background: #962D3E;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   transition: all 1s; }
+  @media only screen and (max-width: 64em) {
+    .menu {
+      display: none; } }
   .menu:hover {
     width: 30vw; }
   .menu:hover .menu__arrow {
     display: none; }
   .menu:hover .menu__nav {
     left: 10vw; }
+    @media only screen and (max-width: 90em) {
+      .menu:hover .menu__nav {
+        left: 7vw; } }
   .menu:hover ~ .section {
     transform: perspective(20vw) rotateY(10deg) translateX(20vw) translateY(5rem) scaleY(1.2); }
   .menu__arrow {
