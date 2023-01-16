@@ -68,6 +68,7 @@ body {
 
 .menu {
   display: flex;
+  z-index: 1999;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -77,9 +78,6 @@ body {
   background: #962D3E;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   transition: all 1s; }
-  @media only screen and (max-width: 64em) {
-    .menu {
-      display: none; } }
   .menu:hover {
     width: 30vw; }
   .menu:hover .menu__arrow {
@@ -121,6 +119,62 @@ body {
     background-position: 100%;
     color: #000;
     transform: translateX(1rem); }
+  @media only screen and (max-width: 64em) {
+    .menu {
+      width: 0%; } }
+  .menu__checkbox {
+    display: none; }
+  .menu__button {
+    display: none;
+    background-color: #962D3E;
+    text-align: center;
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    cursor: pointer; }
+    @media only screen and (max-width: 64em) {
+      .menu__button {
+        display: unset; } }
+  .menu__checkbox:checked ~ .menu {
+    width: 100%; }
+  .menu__checkbox:checked ~ .menu__nav {
+    left: 50vw; }
+  .menu__checkbox:checked ~ .menu__arrow {
+    display: none; }
+  .menu__icon {
+    position: relative;
+    margin-top: 3rem; }
+    .menu__icon, .menu__icon::before, .menu__icon::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #fff;
+      display: inline-block; }
+    .menu__icon::before, .menu__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s; }
+    .menu__icon::before {
+      top: -.8rem; }
+    .menu__icon::after {
+      top: .8rem; }
+  .menu__button:hover .menu__icon::before {
+    top: -1rem; }
+  .menu__button:hover .menu__icon::after {
+    top: 1rem; }
+  .menu__checkbox:checked + .menu__button .menu__icon {
+    background-color: transparent; }
+  .menu__checkbox:checked + .menu__button .menu__icon::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .menu__checkbox:checked + .menu__button .menu__icon::after {
+    top: 0;
+    transform: rotate(-135deg); }
 
 .section {
   display: flex;
