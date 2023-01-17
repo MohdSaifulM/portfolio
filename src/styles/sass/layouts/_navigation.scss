@@ -20,11 +20,7 @@
     }
 
     &:hover &__nav {
-        left: 10vw;
-
-        @include responsive(desktop) {
-            left: 7vw;
-        }
+        left: 50%;
     }
 
     &:hover ~ .section {
@@ -33,11 +29,17 @@
 
     &__arrow {
         display: block;
+
+        @include responsive(tablet) {
+            display: none;
+        }
     }
 
     &__nav {
         position: absolute;
+        top: 50%;
         left: -20rem;
+        transform: translate(-50%, -50%);
         transition: 1.25s;
     }
 
@@ -89,7 +91,6 @@
 
     &__button {
         display: none;
-        background-color: $accent-1;
         text-align: center;
         height: 6rem;
         width: 6rem;
@@ -98,7 +99,6 @@
         left: 2rem;
         border-radius: 50%;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-black, .1);
         cursor: pointer;
 
         @include responsive(tablet) {
@@ -111,11 +111,11 @@
         width: 100%;
     }
 
-    &__checkbox:checked ~ &__nav {
-        left: 50vw;
+    &__checkbox:checked ~ & > &__nav {
+        left: 50%;
     }
 
-    &__checkbox:checked ~ &__arrow {
+    &__checkbox:checked ~ & > &__arrow {
         display: none;
     }
 

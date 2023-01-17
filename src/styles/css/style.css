@@ -83,17 +83,19 @@ body {
   .menu:hover .menu__arrow {
     display: none; }
   .menu:hover .menu__nav {
-    left: 10vw; }
-    @media only screen and (max-width: 90em) {
-      .menu:hover .menu__nav {
-        left: 7vw; } }
+    left: 50%; }
   .menu:hover ~ .section {
     transform: perspective(20vw) rotateY(10deg) translateX(20vw) translateY(5rem) scaleY(1.2); }
   .menu__arrow {
     display: block; }
+    @media only screen and (max-width: 64em) {
+      .menu__arrow {
+        display: none; } }
   .menu__nav {
     position: absolute;
+    top: 50%;
     left: -20rem;
+    transform: translate(-50%, -50%);
     transition: 1.25s; }
   .menu__list {
     list-style: none;
@@ -126,7 +128,6 @@ body {
     display: none; }
   .menu__button {
     display: none;
-    background-color: #962D3E;
     text-align: center;
     height: 6rem;
     width: 6rem;
@@ -135,16 +136,15 @@ body {
     left: 2rem;
     border-radius: 50%;
     z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     cursor: pointer; }
     @media only screen and (max-width: 64em) {
       .menu__button {
         display: unset; } }
   .menu__checkbox:checked ~ .menu {
     width: 100%; }
-  .menu__checkbox:checked ~ .menu__nav {
-    left: 50vw; }
-  .menu__checkbox:checked ~ .menu__arrow {
+  .menu__checkbox:checked ~ .menu > .menu__nav {
+    left: 50%; }
+  .menu__checkbox:checked ~ .menu > .menu__arrow {
     display: none; }
   .menu__icon {
     position: relative;
