@@ -23,7 +23,7 @@
         left: 50%;
     }
 
-    &:hover ~ .section {
+    &:hover ~ main > .section {
         transform: perspective(20vw) rotateY(10deg) translateX(20vw) translateY(5rem) scaleY(1.2);
     }
 

@@ -84,7 +84,7 @@ body {
     display: none; }
   .menu:hover .menu__nav {
     left: 50%; }
-  .menu:hover ~ .section {
+  .menu:hover ~ main > .section {
     transform: perspective(20vw) rotateY(10deg) translateX(20vw) translateY(5rem) scaleY(1.2); }
   .menu__arrow {
     display: block; }
