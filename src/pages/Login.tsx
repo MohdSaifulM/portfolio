@@ -1,7 +1,7 @@
 const Login = () => {
     return (
-        <main>
-        </main>
+        <section>
+        </section>
     );
 };
 

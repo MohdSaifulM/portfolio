@@ -11,15 +11,17 @@ function App() {
     return (
 		<BrowserRouter>
 			<NavigationBar />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/journey" element={<Journey />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/projects" element={<Projects />} />
-				<Route path="*" element={<Navigate to="/" />} />
-			</Routes>
+			<main>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/journey" element={<Journey />} />
+					<Route path="/login" element={<Login />} />
+					<Route path="/projects" element={<Projects />} />
+					<Route path="*" element={<Navigate to="/" />} />
+				</Routes>
+			</main>
 		</BrowserRouter>
     );
 }

@@ -1,7 +1,7 @@
 const Journey = () => {
     return (
-        <main>
-        </main>
+        <section>
+        </section>
     );
 };
 
