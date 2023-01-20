@@ -1,7 +1,10 @@
+import NavigationBar from "../layouts/NavigationBar";
+
 const Projects = () => {
     return (
-        <section>
-        </section>
+        <main>
+            <NavigationBar />
+        </main>
     );
 };
 

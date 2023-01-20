@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import NavigationBar from "./layouts/NavigationBar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -10,18 +9,15 @@ import Projects from "./pages/Projects";
 function App() {
     return (
 		<BrowserRouter>
-			<NavigationBar />
-			<main>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/journey" element={<Journey />} />
-					<Route path="/login" element={<Login />} />
-					<Route path="/projects" element={<Projects />} />
-					<Route path="*" element={<Navigate to="/" />} />
-				</Routes>
-			</main>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/contact" element={<Contact />} />
+				<Route path="/journey" element={<Journey />} />
+				<Route path="/login" element={<Login />} />
+				<Route path="/projects" element={<Projects />} />
+				<Route path="*" element={<Navigate to="/" />} />
+			</Routes>
 		</BrowserRouter>
     );
 }

@@ -1,7 +1,10 @@
+import NavigationBar from "../layouts/NavigationBar";
+
 const Contact = () => {
     return (
-        <section>
-        </section>
+        <main>
+            <NavigationBar />
+        </main>
     );
 };
 
