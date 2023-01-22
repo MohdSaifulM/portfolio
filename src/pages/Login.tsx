@@ -1,6 +1,11 @@
+import NavigationBar from "../layouts/NavigationBar";
+
 const Login = () => {
     return (
-        <div className="section">Login</div>
+        <>
+            <NavigationBar /> 
+            <div className="section">Login</div>
+        </>
     );
 };
 

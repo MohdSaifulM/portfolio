@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import NavigationBar from "./layouts/NavigationBar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -11,7 +10,6 @@ function App() {
     return (
 		<BrowserRouter>
 			<main>
-				<NavigationBar />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<About />} />

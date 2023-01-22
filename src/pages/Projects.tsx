@@ -1,6 +1,11 @@
+import NavigationBar from "../layouts/NavigationBar";
+
 const Projects = () => {
     return (
-        <div className="section">Projects</div>
+        <>
+            <NavigationBar /> 
+            <div className="section">Projects</div>
+        </>
     );
 };
 
