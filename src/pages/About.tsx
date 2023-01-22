@@ -8,7 +8,7 @@ const About = () => {
                 <div className="about">
                     <figure className="about__shape">
                         <img src="src\assets\avatar.png" alt="" className="about__img" />
-                        <figcaption className="about__caption">Saif M</figcaption>
+                        <figcaption className="about__caption">Saif</figcaption>
                     </figure>
                     <div className="about__text">
                         <h3>About Me</h3>

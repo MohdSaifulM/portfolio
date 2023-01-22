@@ -39,3 +39,8 @@ main {
 	padding: 5rem;
 	position: relative;
 }
+
+::selection {
+	background-color: $accent-1;
+	color: $color-white;
+}

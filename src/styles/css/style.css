@@ -46,6 +46,10 @@ main {
   padding: 5rem;
   position: relative; }
 
+::selection {
+  background-color: #962D3E;
+  color: #fff; }
+
 body {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -183,3 +187,70 @@ body {
   flex-direction: column;
   transition: all 1s;
   transform-origin: left center; }
+
+.about {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 2.5rem;
+  font-weight: 200;
+  transform: skewX(-12deg); }
+  @media only screen and (max-width: 64em) {
+    .about {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media only screen and (max-width: 48em) {
+    .about {
+      transform: skewX(0); } }
+  .about__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%; }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .about__shape {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        /* First arg is radius -- Element must be floated and must have defined dimensions */
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none; } }
+    @media only screen and (max-width: 48em) {
+      .about__shape {
+        transform: translateX(-3rem) skewX(0); } }
+  .about__img {
+    height: 100%;
+    transform: translateX(0) scale(1.25);
+    backface-visibility: hidden;
+    transition: all .5s; }
+  .about__text {
+    transform: skewX(12deg); }
+    @media only screen and (max-width: 48em) {
+      .about__text {
+        transform: skewX(0); } }
+  .about__caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .about:hover .about__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .about:hover .about__img {
+    transform: translateX(0) scale(1);
+    filter: blur(3px) brightness(80%); }
