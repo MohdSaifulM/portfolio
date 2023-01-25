@@ -20,6 +20,8 @@ const About = () => {
                 </div>
                 <div className="section section-skills">
                     <Card />
+                    <Card />
+                    <Card />
                 </div>
             </div>
         </>
