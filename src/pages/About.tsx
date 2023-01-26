@@ -19,9 +19,9 @@ const About = () => {
                     </div>
                 </div>
                 <div className="section section-skills">
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Card title="Front-End Development" paragraph="HTML5 | CSS3 & Sass | jQuery | React | Angular"/>
+                    <Card title="Back-End Development" paragraph="Node.js | Express.js | Django | MongoDB | PostgreSQL" />
+                    <Card title="Languages" paragraph="JavaScript | TypeScript | Python" />
                 </div>
             </div>
         </>

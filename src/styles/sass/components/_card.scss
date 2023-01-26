@@ -1,5 +1,6 @@
 .card-container {
 	margin: 5rem;
+    width: calc(75% / 3);
 	
 	.card {
 		font-weight: bold;
@@ -40,6 +41,8 @@
 				
 				h2 {
 					margin: 2rem 0 0;
+                    font-size: 2.5rem;
+                    font-weight: 200;
 				}
 			}
 			
@@ -48,6 +51,8 @@
 				
 				h2 {
 					margin: 2rem 0;
+                    font-size: 2.5rem;
+                    font-weight: 200;
 				}
 				
 				p {
