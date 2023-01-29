@@ -125,6 +125,8 @@ body {
       border: 2px dashed #000;
       border-radius: 1rem;
       z-index: -1; }
+    .card-container .card .icon {
+      font-size: 4rem; }
 
 .menu {
   display: flex;
