@@ -1,6 +1,6 @@
 .card-container {
 	margin: 5rem;
-    width: calc(75% / 3);
+    width: 35rem;
 	
 	.card {
 		font-weight: bold;
@@ -10,7 +10,7 @@
 		&__function {
 			padding: 3rem;
 			width: 100%;
-			height: 40rem;
+			height: 35rem;
 			border: 2px solid $background-1;
             border-radius: 1rem;
             box-shadow: 0 3rem 6rem rgba($color-black, .1);
@@ -58,6 +58,7 @@
 				p {
 					font-weight: normal;
 					line-height: 1.5;
+					font-size: 1.5rem;
 					
 					&.link {
 						margin: 2rem 0 0;
