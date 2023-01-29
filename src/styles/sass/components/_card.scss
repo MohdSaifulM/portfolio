@@ -68,7 +68,7 @@
 			}
 		}
 		
-		.card__border {
+		&__border {
 			position: absolute;
 			width: 100%;
 			height: 100%;
@@ -79,7 +79,7 @@
 			z-index: -1;
 		}
 
-		.icon {
+		&__icon {
 			font-size: 4rem;
 		}
 		

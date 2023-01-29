@@ -11,11 +11,11 @@ const Card: React.FC<{ title: string; paragraph: string, icon: React.ElementType
             <div className="card">
                 <a href="">
                     <div className="card__display">
-                        <Icon className="icon"/>
+                        <Icon className="card__icon"/>
                         <h2>{title}</h2>
                     </div>
                     <div className="card__hover">
-                        <Icon className="icon"/>
+                        <Icon className="card__icon"/>
                         <h2>{title}</h2>
                         <p>{paragraph}</p>
                     </div>
