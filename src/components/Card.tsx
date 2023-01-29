@@ -9,7 +9,7 @@ const Card: React.FC<{ title: string; paragraph: string, icon: React.ElementType
     return (
         <div className="card-container">
             <div className="card">
-                <a href="">
+                <div className="card__function">
                     <div className="card__display">
                         <Icon className="card__icon"/>
                         <h2>{title}</h2>
@@ -19,7 +19,7 @@ const Card: React.FC<{ title: string; paragraph: string, icon: React.ElementType
                         <h2>{title}</h2>
                         <p>{paragraph}</p>
                     </div>
-                </a>
+                </div>
                 <div className="card__border"></div>
             </div>
         </div>
