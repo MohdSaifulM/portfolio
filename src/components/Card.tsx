@@ -13,6 +13,7 @@ const Card: React.FC<{ title: string; paragraph: string, icon: React.ElementType
                     <div className="card__display">
                         <Icon className="card__icon"/>
                         <h2>{title}</h2>
+                        <p>{paragraph}</p>
                     </div>
                     <div className="card__hover">
                         <Icon className="card__icon"/>

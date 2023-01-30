@@ -96,13 +96,14 @@ body {
           display: none; }
         .card-container .card__function:hover .card__hover {
           display: block; }
-      .card-container .card__function .card__display i {
-        font-size: 6rem;
-        margin-top: 20rem; }
       .card-container .card__function .card__display h2 {
-        margin: 2rem 0 0;
+        margin: 2rem 0;
         font-size: 2.5rem;
         font-weight: 200; }
+      .card-container .card__function .card__display p {
+        font-weight: normal;
+        line-height: 1.5;
+        font-size: 1.5rem; }
       .card-container .card__function .card__hover {
         display: none; }
         .card-container .card__function .card__hover h2 {
@@ -113,10 +114,6 @@ body {
           font-weight: normal;
           line-height: 1.5;
           font-size: 1.5rem; }
-          .card-container .card__function .card__hover p.link {
-            margin: 2rem 0 0;
-            font-weight: bold;
-            color: #962D3E; }
     .card-container .card__border {
       position: absolute;
       width: 100%;

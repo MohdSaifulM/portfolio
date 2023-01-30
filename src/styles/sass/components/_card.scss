@@ -34,15 +34,17 @@
 			}
 			
 			.card__display {
-				i {
-					font-size: 6rem;
-					margin-top: 20rem;
-				}
-				
 				h2 {
-					margin: 2rem 0 0;
+					margin: 2rem 0;
                     font-size: 2.5rem;
                     font-weight: 200;
+				}
+
+				p {
+					font-weight: normal;
+					line-height: 1.5;
+					font-size: 1.5rem;
+					
 				}
 			}
 			
@@ -60,11 +62,6 @@
 					line-height: 1.5;
 					font-size: 1.5rem;
 					
-					&.link {
-						margin: 2rem 0 0;
-						font-weight: bold;
-						color: $accent-1;
-					}
 				}
 			}
 		}
