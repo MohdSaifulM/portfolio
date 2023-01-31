@@ -1,6 +1,10 @@
 .card-container {
 	margin: 5rem;
     width: 35rem;
+
+	@include responsive(desktop) {
+		width: 30rem;
+	}
 	
 	.card {
 		font-weight: bold;
@@ -19,6 +23,10 @@
 			color: $color-white;
 			display: block;
 			transition: 0.25s ease;
+
+			@include responsive(desktop) {
+				height: 30rem;
+			}
 			
 			&:hover {
 				transform: translate(-3rem, -3rem);
@@ -37,13 +45,21 @@
 				h2 {
 					margin: 2rem 0;
                     font-size: 2.5rem;
-                    font-weight: 200;
+                    font-weight: 400;
+
+					@include responsive(desktop) {
+						font-size: 2rem;
+					}
 				}
 
 				p {
-					font-weight: normal;
+					font-weight: 200;
 					line-height: 1.5;
 					font-size: 1.5rem;
+
+					@include responsive(desktop) {
+						font-size: 1.2rem;
+					}
 					
 				}
 			}
@@ -54,14 +70,21 @@
 				h2 {
 					margin: 2rem 0;
                     font-size: 2.5rem;
-                    font-weight: 200;
+                    font-weight: 400;
+
+					@include responsive(desktop) {
+						font-size: 2rem;
+					}
 				}
 				
 				p {
-					font-weight: normal;
+					font-weight: 200;
 					line-height: 1.5;
 					font-size: 1.5rem;
 					
+					@include responsive(desktop) {
+						font-size: 1.2rem;
+					}
 				}
 			}
 		}
