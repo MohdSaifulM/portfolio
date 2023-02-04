@@ -1,9 +1,13 @@
 .card-container {
-	margin: 5rem;
+	margin: 5rem 0;
     width: 35rem;
 
 	@include responsive(desktop) {
 		width: 30rem;
+	}
+
+	@include responsive(tablet) {
+		margin: 3rem 0;
 	}
 	
 	.card {

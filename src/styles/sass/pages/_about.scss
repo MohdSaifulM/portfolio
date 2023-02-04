@@ -1,7 +1,7 @@
 .section-skills {
     display: flex;
     flex-direction: row;
-    width: 65%;
+    width: 100%;
 }
 
 .about {
@@ -21,6 +21,7 @@
     @include responsive(tablet) {
         width: 100%;
         padding: 4rem;
+        font-size: 1.8rem;
         padding-left: 7rem;
     }
 
