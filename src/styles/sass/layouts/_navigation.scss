@@ -11,6 +11,11 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .20);
 	transition: all 1s;
 
+    @include responsive(mobile-l) {
+		height: 100%;
+        top: 0;
+	}
+
     &:hover {
         width: 30vw;
     }

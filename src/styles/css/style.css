@@ -76,9 +76,6 @@ body {
   @media only screen and (max-width: 90em) {
     .card-container {
       width: 30rem; } }
-  @media only screen and (max-width: 64em) {
-    .card-container {
-      margin: 3rem 0; } }
   .card-container .card {
     font-weight: bold;
     position: relative;
@@ -159,6 +156,10 @@ body {
   background: #962D3E;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   transition: all 1s; }
+  @media only screen and (max-width: 48em) {
+    .menu {
+      height: 100%;
+      top: 0; } }
   .menu:hover {
     width: 30vw; }
   .menu:hover .menu__arrow {
