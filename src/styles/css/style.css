@@ -79,6 +79,9 @@ body {
   @media only screen and (max-width: 64em) {
     .card-container {
       width: 25rem; } }
+  @media only screen and (max-width: 26.56em) {
+    .card-container {
+      width: 20rem; } }
   .card-container .card {
     font-weight: bold;
     position: relative;
@@ -268,6 +271,9 @@ body {
   flex-direction: column;
   transition: all 1s;
   transform-origin: left center; }
+  @media only screen and (max-width: 48em) {
+    .section {
+      width: 54rem; } }
 
 .section-skills {
   display: flex;

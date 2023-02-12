@@ -10,6 +10,10 @@
 		width: 25rem;
 	}
 
+	@include responsive(mobile-m) {
+		width: 20rem;
+	}
+
 	.card {
 		font-weight: bold;
 		position: relative;
