@@ -5,7 +5,7 @@
 }
 
 .about {
-    width: 65%;
+    width: calc(100% - 20rem);
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
     background-color: rgba($color-white, .1);
     border-radius: 3px;
@@ -27,6 +27,7 @@
 
     @include responsive(mobile-l) {
         transform: skewX(0);
+        font-size: 1.6rem;
     }
 
     &__shape {

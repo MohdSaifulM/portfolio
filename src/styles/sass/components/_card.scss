@@ -6,6 +6,10 @@
 		width: 30rem;
 	}
 
+	@include responsive(tablet) {
+		width: 25rem;
+	}
+
 	.card {
 		font-weight: bold;
 		position: relative;

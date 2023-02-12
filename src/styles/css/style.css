@@ -76,6 +76,9 @@ body {
   @media only screen and (max-width: 90em) {
     .card-container {
       width: 30rem; } }
+  @media only screen and (max-width: 64em) {
+    .card-container {
+      width: 25rem; } }
   .card-container .card {
     font-weight: bold;
     position: relative;
@@ -272,7 +275,7 @@ body {
   width: 100%; }
 
 .about {
-  width: 65%;
+  width: calc(100% - 20rem);
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
@@ -291,7 +294,8 @@ body {
       padding-left: 7rem; } }
   @media only screen and (max-width: 48em) {
     .about {
-      transform: skewX(0); } }
+      transform: skewX(0);
+      font-size: 1.6rem; } }
   .about__shape {
     width: 15rem;
     height: 15rem;
