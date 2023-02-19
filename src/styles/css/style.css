@@ -349,3 +349,9 @@ body {
   .about:hover .about__img {
     transform: translateX(0) scale(1);
     filter: blur(3px) brightness(80%); }
+
+.contact__icon {
+  position: absolute;
+  left: 5rem;
+  top: 3rem;
+  font-size: 8rem; }
