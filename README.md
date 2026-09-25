@@ -41,6 +41,7 @@ A few things were drafted from context available at build time and are worth dou
 - **Type**: IBM Plex Sans Condensed (display), IBM Plex Sans (body), IBM Plex Mono (terminal/metadata) — loaded via `next/font/google` in `src/app/layout.tsx`.
 - **Motion**: scroll-reveals via `src/components/ui/reveal.tsx`, all gated on `prefers-reduced-motion`. The terminal's boot animation plays once per browser session and is skipped entirely under reduced motion.
 - **The terminal is a shortcut, not a gate** — every command it runs (jump to a section, open the résumé/GitHub/LinkedIn, toggle theme) is also reachable from a plain link or button elsewhere on the page.
+- **Just-for-fun extras** (type `help` in the terminal to see the full list): `cowsay <message>` draws an ASCII cow, and `js` drops into a real JavaScript REPL evaluated live in your browser tab (`exit` to leave it). Logic for both lives in `src/lib/terminal-commands.ts`.
 
 ## Stack
 

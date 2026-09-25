@@ -27,6 +27,7 @@ import {
   helpText,
   navCommands,
   notFoundText,
+  runJs,
   whoamiText,
   type TerminalLine,
 } from "@/lib/terminal-commands";
@@ -45,6 +46,8 @@ export function Terminal() {
   const [input, setInput] = useState("");
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState<number | null>(null);
+  // "js" mode routes every line to the JS REPL instead of the command list.
+  const [mode, setMode] = useState<"shell" | "js">("shell");
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -86,12 +89,34 @@ export function Terminal() {
   }, [history, displayedBoot]);
 
   function runCommand(raw: string) {
-    const cmd = raw.trim().toLowerCase();
-    if (!cmd) return;
+    const trimmed = raw.trim();
+    if (!trimmed) return;
 
     setCommandHistory((h) => [...h, raw]);
     setHistoryIndex(null);
 
+    // Snapshot the prompt this line was actually typed under, so scrolling
+    // back through history shows what was true at the time — not whatever
+    // mode the terminal happens to be in when it re-renders later.
+    const commandPrompt = mode === "js" ? "js>" : `${prompt}:~$`;
+    const record = (output: string[]) =>
+      setHistory((h) => [
+        ...h,
+        { type: "command", text: raw, prompt: commandPrompt },
+        ...output.map((text): TerminalLine => ({ type: "output", text })),
+      ]);
+
+    if (mode === "js") {
+      if (trimmed === "exit") {
+        setMode("shell");
+        record([`exited javascript repl.`]);
+      } else {
+        record(runJs(trimmed));
+      }
+      return;
+    }
+
+    const cmd = trimmed.toLowerCase();
     if (cmd === "clear") {
       setHistory([]);
       return;
@@ -130,17 +155,16 @@ export function Terminal() {
       scroll("contact");
       output = [`permission granted.`, `redirecting to contact…`];
     } else if (cmd === "cowsay" || cmd.startsWith("cowsay ")) {
-      const message = raw.trim().replace(/^cowsay\s*/i, "").trim();
+      const message = trimmed.replace(/^cowsay\s*/i, "").trim();
       output = cowsay(message || "moo! (tip: cowsay <your message>)");
+    } else if (cmd === "js") {
+      setMode("js");
+      output = [`javascript repl — real js, runs right here in your browser.`, `type 'exit' to return.`];
     } else {
-      output = notFoundText(raw.trim());
+      output = notFoundText(trimmed);
     }
 
-    setHistory((h) => [
-      ...h,
-      { type: "command", text: raw },
-      ...output.map((text): TerminalLine => ({ type: "output", text })),
-    ]);
+    record(output);
   }
 
   function handleKeyDown(event: KeyboardEvent<HTMLInputElement>) {
@@ -202,7 +226,7 @@ export function Terminal() {
               {history.map((line, i) =>
                 line.type === "command" ? (
                   <p key={i} className="mt-2 text-ink">
-                    <span className="text-accent">{prompt}:~$</span> {line.text}
+                    <span className="text-accent">{line.prompt}</span> {line.text}
                   </p>
                 ) : (
                   <p key={i} className="whitespace-pre-wrap text-ink-muted">
@@ -214,9 +238,11 @@ export function Terminal() {
 
             {/* Live prompt */}
             <label className="mt-2 flex items-center gap-2 text-ink">
-              <span className="sr-only">Portfolio terminal command input</span>
+              <span className="sr-only">
+                {mode === "js" ? "JavaScript REPL input" : "Portfolio terminal command input"}
+              </span>
               <span aria-hidden className="shrink-0 text-accent">
-                {prompt}:~$
+                {mode === "js" ? "js>" : `${prompt}:~$`}
               </span>
               <span className="relative flex-1">
                 <input
@@ -231,7 +257,7 @@ export function Terminal() {
                   spellCheck={false}
                   aria-autocomplete="none"
                   className="w-full bg-transparent caret-accent outline-none placeholder:text-ink-muted/60"
-                  placeholder="type 'help'"
+                  placeholder={mode === "js" ? "try: 2 + 2" : "type 'help'"}
                 />
               </span>
             </label>

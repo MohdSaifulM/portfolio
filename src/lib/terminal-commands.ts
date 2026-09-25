@@ -11,7 +11,7 @@ import { sections } from "@/data/sections";
 
 export type TerminalLine =
   | { type: "output"; text: string }
-  | { type: "command"; text: string };
+  | { type: "command"; text: string; prompt: string };
 
 /** Commands that just jump to a section — generated from the section registry. */
 export const navCommands = sections.map((s) => s.id);
@@ -25,6 +25,7 @@ export const commandList = [
   "whoami",
   "theme",
   "cowsay",
+  "js",
   "clear",
   "help",
 ] as const;
@@ -55,6 +56,7 @@ export function helpText(): string[] {
     `  whoami      about this terminal`,
     `  theme       toggle light / dark`,
     `  cowsay <msg> make the cow say something`,
+    `  js          start a javascript repl (real JS, runs right here)`,
     `  clear       clear the screen`,
   ];
 }
@@ -112,4 +114,54 @@ export function cowsay(message: string): string[] {
         });
 
   return [` ${"_".repeat(width + 2)}`, ...bubble, ` ${"-".repeat(width + 2)}`, ...COW];
+}
+
+function stringifyJsValue(value: unknown): string {
+  if (typeof value === "undefined") return "undefined";
+  if (typeof value === "function") return value.toString();
+  if (value instanceof Error) return `${value.name}: ${value.message}`;
+  if (typeof value === "string") return value;
+  try {
+    return JSON.stringify(value, null, 2) ?? String(value);
+  } catch {
+    return String(value);
+  }
+}
+
+/**
+ * Real JavaScript, evaluated in the visitor's own browser tab — no server
+ * round-trip, and nothing it can do that the browser's own devtools console
+ * couldn't already do.
+ *
+ * Uses *indirect* eval (`(0, eval)(code)`, as opposed to calling `eval`
+ * directly) so the code runs in global scope rather than this function's
+ * local scope — that's what lets a `var` declared in one command still be
+ * readable from the next. `let`/`const` don't get the same treatment: each
+ * separate eval() call gets its own throwaway lexical scope for them, so a
+ * `let x` here would vanish immediately after this call returns (unlike a
+ * real REPL, which fakes persistence with engine-internal support we don't
+ * have). Rewriting `let`/`const` to `var` before running is what actually
+ * makes variables survive from one command to the next.
+ */
+export function runJs(code: string): string[] {
+  const logs: string[] = [];
+  const originalLog = console.log;
+  console.log = (...args: unknown[]) => {
+    logs.push(args.map(stringifyJsValue).join(" "));
+  };
+
+  const persistentCode = code.replace(/\b(let|const)\b/g, "var");
+
+  try {
+    const result = (0, eval)(persistentCode);
+    if (typeof result !== "undefined") {
+      logs.push(`=> ${typeof result === "string" ? JSON.stringify(result) : stringifyJsValue(result)}`);
+    }
+  } catch (error) {
+    logs.push(`Uncaught ${error instanceof Error ? error.message : String(error)}`);
+  } finally {
+    console.log = originalLog;
+  }
+
+  return logs;
 }
