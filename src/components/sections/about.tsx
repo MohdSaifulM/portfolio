@@ -6,15 +6,12 @@
  * audience already reads fluently.
  */
 import { education } from "@/data/education";
-import { experience } from "@/data/experience";
 import { profile } from "@/data/profile";
 import { skills } from "@/data/skills";
 import { Reveal } from "@/components/ui/reveal";
 
-function careerLengthYears(): number {
-  const earliestStart = Number(experience.at(-1)?.start);
-  if (Number.isNaN(earliestStart)) return 0;
-  return new Date().getFullYear() - earliestStart;
+function softwareEngineeringYears(): number {
+  return new Date().getFullYear() - profile.softwareEngineerSince;
 }
 
 export function About() {
@@ -22,7 +19,7 @@ export function About() {
     ["os", profile.role],
     ["shell", skills[0]?.items.slice(0, 2).join(" / ") ?? ""],
     ["location", profile.location],
-    ["uptime", `${careerLengthYears()}+ years in tech`],
+    ["uptime", `${softwareEngineeringYears()}+ years in software`],
     ["education", education.map((e) => e.school).join(" · ")],
   ];
 

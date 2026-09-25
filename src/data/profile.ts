@@ -31,6 +31,14 @@ export const profile = {
 
   location: "Singapore",
 
+  /**
+   * Year your *software engineering* career started — used for the "uptime"
+   * stat in the About section. Deliberately separate from `experience.ts`,
+   * since that log also includes pre-software roles (e.g. field/systems
+   * engineering) that shouldn't count toward "years as a software engineer".
+   */
+  softwareEngineerSince: 2021,
+
   /** Public contact email — shown in the Contact section and footer. */
   email: "mohd.saiful@live.com",
 
