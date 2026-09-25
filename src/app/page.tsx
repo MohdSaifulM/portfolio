@@ -1,11 +1,23 @@
-import { profile } from "@/data/profile";
+import { About } from "@/components/sections/about";
+import { Contact } from "@/components/sections/contact";
+import { Experience } from "@/components/sections/experience";
+import { Hero } from "@/components/sections/hero";
+import { Projects } from "@/components/sections/projects";
+import { Nav } from "@/components/layout/nav";
+import { Footer } from "@/components/layout/footer";
 
-// Temporary placeholder — replaced by the full section layout in the next
-// commit. Kept minimal here just to verify the toolchain/build works.
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="font-mono text-ink">{profile.name} — rebuild in progress</p>
-    </main>
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
