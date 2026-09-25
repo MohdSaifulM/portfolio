@@ -23,6 +23,7 @@ import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { profile } from "@/data/profile";
 import {
   bootSequence,
+  cowsay,
   helpText,
   navCommands,
   notFoundText,
@@ -128,6 +129,9 @@ export function Terminal() {
     } else if (cmd === "sudo hire me") {
       scroll("contact");
       output = [`permission granted.`, `redirecting to contact…`];
+    } else if (cmd === "cowsay" || cmd.startsWith("cowsay ")) {
+      const message = raw.trim().replace(/^cowsay\s*/i, "").trim();
+      output = cowsay(message || "moo! (tip: cowsay <your message>)");
     } else {
       output = notFoundText(raw.trim());
     }

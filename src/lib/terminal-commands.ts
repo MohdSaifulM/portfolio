@@ -24,6 +24,7 @@ export const commandList = [
   "email",
   "whoami",
   "theme",
+  "cowsay",
   "clear",
   "help",
 ] as const;
@@ -53,6 +54,7 @@ export function helpText(): string[] {
     `  email       compose an email to me`,
     `  whoami      about this terminal`,
     `  theme       toggle light / dark`,
+    `  cowsay <msg> make the cow say something`,
     `  clear       clear the screen`,
   ];
 }
@@ -67,4 +69,47 @@ export function whoamiText(): string[] {
 
 export function notFoundText(input: string): string[] {
   return [`command not found: ${input}`, `type 'help' for a list of commands.`];
+}
+
+const COW = [
+  "        \\   ^__^",
+  "         \\  (oo)\\_______",
+  "            (__)\\       )\\/\\",
+  "                ||----w |",
+  "                ||     ||",
+];
+
+const COWSAY_MAX_WIDTH = 40;
+
+/** A tiny `cowsay`, because a portfolio should be at least a little fun. */
+export function cowsay(message: string): string[] {
+  const words = message.split(/\s+/).filter(Boolean);
+  const lines: string[] = [];
+  let current = "";
+  for (const word of words) {
+    const candidate = current ? `${current} ${word}` : word;
+    if (candidate.length > COWSAY_MAX_WIDTH) {
+      if (current) lines.push(current);
+      current = word;
+    } else {
+      current = candidate;
+    }
+  }
+  if (current) lines.push(current);
+  if (lines.length === 0) lines.push("moo?");
+
+  const width = Math.max(...lines.map((line) => line.length));
+  const pad = (line: string) => line + " ".repeat(width - line.length);
+
+  const bubble =
+    lines.length === 1
+      ? [`< ${pad(lines[0])} >`]
+      : lines.map((line, i) => {
+          const padded = pad(line);
+          if (i === 0) return `/ ${padded} \\`;
+          if (i === lines.length - 1) return `\\ ${padded} /`;
+          return `| ${padded} |`;
+        });
+
+  return [` ${"_".repeat(width + 2)}`, ...bubble, ` ${"-".repeat(width + 2)}`, ...COW];
 }
